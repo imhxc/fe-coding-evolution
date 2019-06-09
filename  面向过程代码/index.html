@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TodoList</title>
+</head>
+<body>
+	<input type='text' />
+	<button>提交</button>
+	<ul></ul>
+	<script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.js"></script>
+	<script>
+		$(function() {
+			var this_ = this;
+			var inputElem = $('input');
+			var ulElement = $('ul');
+
+			function handleBtnClick () {
+				var inputVal = inputElem.val();
+				var item = $('<li>' + inputVal + '</li>');
+				inputElem.val('');
+				ulElement.append(item);
+			}
+
+			function handleItemClick (e) {
+				$(e.currentTarget).remove();
+			}
+
+			$('button').on('click', handleBtnClick);
+			$('ul').on('click', 'li', handleItemClick);
+
+		});
+	</script>
+</body>
+</html>

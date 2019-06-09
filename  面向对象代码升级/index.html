@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TodoList</title>
+</head>
+<body>
+	<script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.js"></script>
+	<script src="./jquery.extend.js"></script>
+	<script src="./component.js"></script>
+	<script src="./todoitem.js"></script>
+	<script src="./todolist.js"></script>
+	<script>
+		$(function() {
+			new TodoList($('body'));
+		});
+	</script>
+</body>
+</html>
